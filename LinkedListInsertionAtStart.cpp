@@ -11,28 +11,26 @@ class Node {
             next = NULL;
         }
 };
-
-// Function to insert a node at the head of the linked list
-void insertAtHead(Node*& head, int value) {
-    Node* new_node = new Node(value);  // Fix the variable name
+void insertAtHead(Node*& head, int value) 
+{
+    Node* new_node = new Node(value);  
     new_node->next = head;
     head = new_node;
 }
 
 
-void display(Node* head) {  
+void display(Node* head) 
+{  
     Node* temp = head;
     while(temp != NULL) {
         cout << temp->value << "->";
         temp = temp->next;
     }
-    cout << "NULL" << endl;  // Fix the output from "Null" to "NULL"
+    cout << "NULL" << endl;
 }
 
 int main() {  
     Node* head = NULL;
-
-    // Insert nodes and display the list
     insertAtHead(head, 4);
     display(head);
 
